@@ -13,7 +13,6 @@
     "node_modules": true,
     "package-lock.json": true,
     "postcss.config.js": true,
-    "public": true,
     "README.md": true,
     "tailwind.config.ts": true,
     "tsconfig.json": true,
@@ -27,6 +26,7 @@
     "tanstack"
   ],
   "conventionalCommits.scopes": [
-    "global"
+    "global",
+    "boards"
   ]
 }
