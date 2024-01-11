@@ -1,4 +1,4 @@
-export interface Clip {
+export default interface Clip {
   id: string;
   height: number;
   width: number;

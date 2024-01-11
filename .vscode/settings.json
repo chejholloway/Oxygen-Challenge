@@ -17,9 +17,10 @@
     "tailwind.config.ts": true,
     "tsconfig.json": true,
     "src\\app\\favicon.ico": true,
-    ".next": true,
     "next-env.d.ts": true,
-    "next.config.js": true
+    "public": true,
+    ".env": true,
+    ".next": true
   },
   "hide-files.files": [],
   "cSpell.ignoreWords": [
@@ -27,6 +28,7 @@
   ],
   "conventionalCommits.scopes": [
     "global",
-    "boards"
+    "boards",
+    "assets"
   ]
 }

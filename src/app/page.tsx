@@ -1,14 +1,14 @@
 // page.
 
-"use client";
-import { AppProps } from "next/app";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Boards from "./components/Boards";
-import Assets from "./components/Assets";
+'use client'
 
-const queryClient = new QueryClient();
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Boards from './components/Boards'
+import Assets from './components/Assets'
 
-function Home({ Component, pageProps }: AppProps) {
+const queryClient = new QueryClient()
+
+function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <main>
@@ -16,7 +16,7 @@ function Home({ Component, pageProps }: AppProps) {
         <Assets />
       </main>
     </QueryClientProvider>
-  );
+  )
 }
 
-export default Home;
+export default Home
