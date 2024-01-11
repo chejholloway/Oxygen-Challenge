@@ -20,7 +20,9 @@
     "next-env.d.ts": true,
     "public": true,
     ".env": true,
-    ".next": true
+    ".next": true,
+    "dist": true,
+    "next.config.js": true
   },
   "hide-files.files": [],
   "cSpell.ignoreWords": [
