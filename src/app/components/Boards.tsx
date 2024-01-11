@@ -2,9 +2,10 @@
 import { FC } from "react";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
-import { headers } from "../config/apiConfig.ts";
+import { headers } from "../config/apiConfig";
 import { requestBody } from "../config/apiBody";
-import Board from "../interfaces/Board.ts";
+import Board from "../interfaces/Board";
+import BoardsData from "../interfaces/BoardsData"
 import BoardImage from "../components/BoardImage";
 import BoardsTitle from "../components/BoardsTitle";
 
