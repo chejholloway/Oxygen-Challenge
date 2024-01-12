@@ -2,12 +2,12 @@
 import { FC } from "react";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
-import { headers } from "../config/apiConfig";
-import { requestBody } from "../config/apiBody";
-import Board from "../interfaces/Board";
-import BoardsData from "../interfaces/BoardsData"
-import BoardImage from "../components/BoardImage";
-import BoardsTitle from "../components/BoardsTitle";
+import { headers } from "./apiConfig";
+import { requestBody } from "./apiBody";
+import Board from "../../interfaces/Board";
+import BoardsData from "../../interfaces/BoardsData"
+import BoardImage from "./BoardImage";
+import BoardsTitle from "../Assets/BoardsTitle";
 
 // const API_URL = process.env.BOARDS_URL;
 const API_URL =

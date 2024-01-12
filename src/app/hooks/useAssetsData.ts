@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { headers } from "../config/apiAssetsConfig";
-import { requestBody } from "../config/apiAssetsBody";
+import { headers } from "../components/Assets/apiAssetsConfig";
+import { requestBody } from "../components/Assets/apiAssetsBody";
 
 const API_URL = "https://api.air.inc/shorturl/bDkBvnzpB/clips/search";
 

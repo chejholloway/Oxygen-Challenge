@@ -4,10 +4,10 @@ import Masonry from 'react-layout-masonry'
 import Image from 'next/image'
 import { block } from 'million/react-server'
 
-import { headers } from '../config/apiAssetsConfig'
-import { requestBody } from '../config/apiAssetsBody'
+import { headers } from './apiAssetsConfig'
+import { requestBody } from './apiAssetsBody'
 import Clip from '../interfaces/Clip'
-import AssetsTitle from '../components/AssetsTitle'
+import AssetsTitle from './AssetsTitle'
 
 const API_URL = 'https://api.air.inc/shorturl/bDkBvnzpB/clips/search'
 

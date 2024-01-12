@@ -1,6 +1,6 @@
 // components/BoardsTitle.tsx
 import { FC } from "react";
-import BoardsTitleProps from "../interfaces/BoardsTitleProps";
+import BoardsTitleProps from "../../interfaces/BoardsTitleProps";
 
 const BoardsTitle: FC<BoardsTitleProps> = ({ count }) => {
   return (

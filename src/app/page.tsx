@@ -3,8 +3,8 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Boards from './components/Boards'
-import Assets from './components/Assets'
+import Boards from './components/Boards/Boards'
+import Assets from './components/Assets/Assets'
 
 const queryClient = new QueryClient()
 

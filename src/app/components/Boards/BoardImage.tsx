@@ -1,7 +1,7 @@
 // components/BoardImage.tsx
 import { FC } from 'react'
 import Image from 'next/image'
-import BoardImageProps from '../interfaces/BoardImageProps.ts'
+import BoardImageProps from '../../interfaces/BoardImageProps.js'
 
 const BoardImage: FC<BoardImageProps> = ({ src, alt }) => (
   <figure className="mb-4 mx-2 relative group w-[210px] h-[210px] rounded-lg overflow-hidden border-gray-200 border-0 opacity-0 hover:border-8 opacity-100 transition-all duration-200 ">
