@@ -8,7 +8,7 @@ const BoardImage: FC<BoardImageProps> = ({ src, alt }) => (
     <div
       className="w-full h-full bg-cover bg-center rounded-lg relative cursor-pointer"
       style={{ backgroundImage: `url(${src})` }}>
-      <div class="absolute z-100 top-2 right-2 text-center hidden group-hover:block rounded-lg bg-black text-white flex justify-center items-center w-8 h-8 opacity-75">
+      <div className="absolute z-100 top-2 right-2 text-center hidden group-hover:block rounded-lg bg-black text-white flex justify-center items-center w-8 h-8 opacity-75">
         ...
       </div>
       <div className="absolute inset-0  bg-gradient-to-t from-black to-white opacity-50 rounded-lg"></div>

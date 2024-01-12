@@ -1,26 +1,46 @@
 // components/Fetcher.tsx
-import { FC, ReactNode } from "react";
-import {
-  useQuery,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import BoardsData from "../interfaces/BoardsData";
-import FetcherProps from "../interfaces/FetcherProps";
-import FetcherDataWithProps from "../interfaces/FetcherDataWithProps";
+import { FC } from 'react'
+import { useQuery } from '@tanstack/react-query'
 
-const Fetcher: FC<FetcherPropsWithData> = ({ queryKey, queryFn, children }) => {
-  const queryClient = new QueryClient();
+interface FetcherProps<Data> {
+  apiURL: string
+  headers: Headers
+  requestBody: Record<string, any>
+  render: (data: Data) => React.ReactNode
+}
 
-  const { data, isLoading, error } = useQuery<BoardsData>(queryKey, queryFn, {
-    queryClient,
-  });
+const Fetcher: FC<FetcherProps<any>> = ({
+  apiURL,
+  headers,
+  requestBody,
+  render,
+}) => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: [apiURL],
+    queryFn: async () => {
+      const response = await fetch(apiURL, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(requestBody),
+      })
 
-  return (
-    <QueryClientProvider client={queryClient}>
-      {children(data, isLoading, error)}
-    </QueryClientProvider>
-  );
-};
+      if (!response.ok) {
+        throw new Error('Failed to fetch data')
+      }
 
-export default Fetcher;
+      return response.json()
+    },
+  })
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>
+  }
+
+  return <>{render(data)}</>
+}
+
+export default Fetcher
