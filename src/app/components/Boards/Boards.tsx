@@ -7,7 +7,7 @@ import { requestBody } from "./apiBody";
 import Board from "../../interfaces/Board";
 import BoardsData from "../../interfaces/BoardsData"
 import BoardImage from "./BoardImage";
-import BoardsTitle from "../Assets/BoardsTitle";
+import BoardsTitle from "./BoardsTitle";
 
 // const API_URL = process.env.BOARDS_URL;
 const API_URL =
