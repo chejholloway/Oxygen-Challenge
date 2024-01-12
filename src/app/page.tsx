@@ -4,16 +4,15 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Boards from './components/Boards/Boards'
 import Assets from './components/Assets/Assets'
-// import { block } from 'million/react-server'
+import { GlobalStyles } from 'twin.macro'
 
 const queryClient = new QueryClient()
-// const AssetsBlock = block(Assets)
-// const BoardsBlock = block(Boards)
 
 function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <main>
+        <GlobalStyles />
         <Boards />
         <Assets />
       </main>

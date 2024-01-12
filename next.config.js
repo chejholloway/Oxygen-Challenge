@@ -1,5 +1,9 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
+const withTwin = require('./withTwin.js')
+
+/**
+ * @type {import('next').NextConfig}
+ */
+module.exports = withTwin({
   reactStrictMode: true,
   // output: 'export',
   distDir: 'dist',
@@ -15,5 +19,5 @@ module.exports = {
         pathname: '/**',
       },
     ],
-  },
-}
+  }
+})
