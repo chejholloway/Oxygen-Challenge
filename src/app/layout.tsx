@@ -13,6 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <title>Air's Gallery Challenge</title>
       <body className={inter.className}>{children}</body>
     </html>
   )

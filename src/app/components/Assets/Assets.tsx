@@ -3,8 +3,6 @@ import React from 'react'
 import Masonry from 'react-layout-masonry'
 
 import Fetcher from '../Fetcher'
-import { headers } from './apiAssetsConfig' // externalize to .env
-import { requestBody } from './apiAssetsBody' // externalize to .env
 
 import Clip from '../interfaces/Clip'
 import AssetsTitle from './AssetsTitle'
@@ -12,14 +10,12 @@ import AssetImage from './AssetImage'
 
 import { AssetsContainer } from './styles/AssetsStyles'
 
-const API_URL = process.env.NEXT_PUBLIC_ASSETS_URL
-
 const Assets: React.FC = () => {
   return (
     <Fetcher
-      apiURL={API_URL}
-      headers={headers}
-      requestBody={requestBody}
+      apiURL={process.env.NEXT_PUBLIC_ASSETS_URL}
+      headers={JSON.parse(process.env.NEXT_PUBLIC_ASSETS_HEADER)}
+      requestBody={JSON.parse(process.env.NEXT_PUBLIC_ASSETS_BODY)}
       render={(data: { data: { clips: Clip[] } }) => {
         return (
           <AssetsContainer>
