@@ -10,6 +10,8 @@ import BoardsData from '../../interfaces/BoardsData'
 import BoardImage from './BoardImage'
 import BoardsTitle from './BoardsTitle'
 
+import { BoardsContainer, BoardsImageList } from './styles/Boards.styles'
+
 const Boards: FC = () => {
   return (
     <Fetcher
@@ -25,16 +27,16 @@ const Boards: FC = () => {
           })) || []
 
         return (
-          <div className="container mx-auto my-8">
+          <BoardsContainer>
             <BoardsTitle count={boards.length} />
             {boards.length > 0 && (
-              <div className="flex flex-wrap pt-6">
+              <BoardsImageList>
                 {boards.map(({ id, title, thumbnails }) => (
                   <BoardImage key={id} src={thumbnails[0]} alt={`${title}`} />
                 ))}
-              </div>
+              </BoardsImageList>
             )}
-          </div>
+          </BoardsContainer>
         )
       }}
     />
