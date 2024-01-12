@@ -11,10 +11,7 @@ import BoardsData from '../../interfaces/BoardsData'
 import BoardImage from './BoardImage'
 import BoardsTitle from './BoardsTitle'
 
-// const API_URL = process.env.BOARDS_URL;
-const API_URL =
-  'https://api.air.inc/shorturl/bDkBvnzpB/boards/c74bbbc8-602b-4c88-be71-9e21b36b0514'
-
+const API_URL = process.env.NEXT_PUBLIC_BOARDS_URL
 const Boards: FC = () => {
   return (
     <Fetcher
