@@ -1,13 +1,8 @@
 // components/Fetcher.tsx
 import { FC } from 'react'
 import { useQuery } from '@tanstack/react-query'
+import FetcherProps from '../interfaces/FetcherProps'
 
-interface FetcherProps<Data> {
-  apiURL: string
-  headers: Headers
-  requestBody: Record<string, any>
-  render: (data: Data) => React.ReactNode
-}
 
 const Fetcher: FC<FetcherProps<any>> = ({
   apiURL,

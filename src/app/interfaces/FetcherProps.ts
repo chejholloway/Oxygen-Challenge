@@ -1,5 +1,6 @@
-export interface FetcherProps {
-  queryKey: string[];
-  queryFn: () => Promise<any>;
-  children: (data: any, isLoading: boolean, error: Error | null) => ReactNode;
+export interface FetcherProps<Data> {
+  apiURL: string
+  headers: Headers
+  requestBody: Record<string, any>
+  render: (data: Data) => React.ReactNode
 }
