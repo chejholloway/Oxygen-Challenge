@@ -10,10 +10,6 @@ export const Ellipses = styled.span`
   ${tw`absolute z-10 top-2 right-2 text-center hidden group-hover:block rounded-lg bg-black text-white flex justify-center items-center w-8 h-8 opacity-75`}
 `
 
-export const ImageContainer = styled.div`
-  ${tw`w-full h-full bg-cover bg-center rounded-lg relative cursor-pointer`}
-`
-
 export const FadeEffect = styled.div`
   ${tw`absolute bottom-0 left-0 p-4 text-white font-sans text-xl antialiased font-semibold tracking-normal`}
 `
