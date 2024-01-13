@@ -5,7 +5,7 @@ const withTwin = require('./withTwin.js')
  */
 module.exports = withTwin({
   reactStrictMode: true,
-  // output: 'export',
+  output: 'export',
   distDir: 'dist',
   typescript: {
     ignoreBuildErrors: true,
