@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 import AssetImageProps from '../../interfaces/AssetImageProps'
 import Ellipses from './Ellipses'
-import Caption from './Caption'
+// import Caption from './Caption'
 
-import { AssetsImageGrid, ImageStyles } from './styles/AssetsStyles'
+import { AssetsImageGrid } from './styles/AssetsStyles'
 
 const AssetImage: React.FC<AssetImageProps> = ({
   id,
@@ -23,13 +23,18 @@ const AssetImage: React.FC<AssetImageProps> = ({
       width={0}
       height={0}
       sizes="100vw"
-      className="w-full h-[240px]"
+      className="w-full rounded-sm"
       style={{ height: 'auto', width: '100%' }}
       priority={true}
 
     />
     <Ellipses />
-    <Caption />
+    <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 text-white transition-opacity duration-300 group-hover:opacity-75 bg-gradient-to-t from-black via-black to-transparent cursor-pointer">
+      <p className="text-xs font-normal truncate ">{displayName}</p>
+      <p className="text-xs uppercase">
+        {ext} {height} x {width}
+      </p>
+    </div>
   </div>
 )
 

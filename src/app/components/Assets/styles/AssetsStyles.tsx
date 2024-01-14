@@ -23,5 +23,4 @@ export const Dimensions = styled.p`
   ${tw`text-xs uppercase`}
 `
 
-export const AssetsImageGrid = `relative flex pt-1 overflow-hidden`
-// export const ImageStyles = `w-full h-[240px] rounded-lg object-cover`
+export const AssetsImageGrid = `relative group flex pt-2 overflow-hidden`
