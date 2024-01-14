@@ -2,6 +2,7 @@
 import React from 'react'
 import Masonry from 'react-layout-masonry'
 
+import { ASSETS_HEADER, ASSETS_BODY } from '../../config/assetsConfig'
 import Fetcher from '../Fetcher'
 
 import Clip from '../interfaces/Clip'
@@ -14,8 +15,8 @@ const Assets: React.FC = () => {
   return (
     <Fetcher
       apiURL={process.env.NEXT_PUBLIC_ASSETS_URL}
-      headers={JSON.parse(process.env.NEXT_PUBLIC_ASSETS_HEADER)}
-      requestBody={JSON.parse(process.env.NEXT_PUBLIC_ASSETS_BODY)}
+      headers={ASSETS_HEADER}
+      requestBody={ASSETS_BODY}
       render={(data: { data: { clips: Clip[] } }) => {
         return (
           <AssetsContainer>

@@ -4,7 +4,7 @@ export const AssetsContainer = styled.div`
   ${tw`container mx-auto my-8 pl-2`}
 `
 export const AssetsTitleText = styled.span`
-  ${tw`text-xs font-bold ml-2 text-gray-600`}
+  ${tw`text-xs font-bold text-gray-600 uppercase`}
 `
 
 export const EllipsesStyles = styled.span`

@@ -40,3 +40,4 @@ dist
 .vscode
 .env
 next.config.mjs
+.env.local

@@ -5,8 +5,8 @@ import AssetsTitleProps from '../interfaces/AssetsTitleProps'
 import { AssetsTitleText } from './styles/AssetsStyles'
 
 const AssetsTitle: FC<AssetsTitleProps> = ({ count }) => {
-  const title = `4 Sub-groups ${count} assets`
-  
+  const title = `assets (${count})`
+
   return (
     <AssetsTitleText>
       {title}

@@ -3,6 +3,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import { useQuery } from '@tanstack/react-query'
 
+import { BOARDS_BODY, BOARDS_HEADER } from '../../config/boardsConfig'
 import Fetcher from '../Fetcher'
 
 import Board from '../../interfaces/Board'
@@ -16,8 +17,8 @@ const Boards: FC = () => {
   return (
     <Fetcher
       apiURL={process.env.NEXT_PUBLIC_BOARDS_URL}
-      headers={JSON.parse(process.env.NEXT_PUBLIC_BOARDS_HEADER)}
-      requestBody={JSON.parse(process.env.NEXT_PUBLIC_BOARDS_BODY)}
+      headers={BOARDS_HEADER}
+      requestBody={BOARDS_BODY}
       render={(data: BoardsData) => {
         const boards =
           data?.data.map(({ id, title, thumbnails }) => ({

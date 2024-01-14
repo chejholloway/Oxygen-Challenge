@@ -10,14 +10,16 @@ const Fetcher: FC<FetcherProps<any>> = ({
   requestBody,
   render,
 }) => {
+  const options = {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(requestBody),
+  };
+
   const { data, isLoading, error } = useQuery({
     queryKey: [apiURL],
     queryFn: async () => {
-      const response = await fetch(apiURL, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(requestBody),
-      })
+      const response = await fetch(apiURL, options)
 
       if (!response.ok) {
         throw new Error('Failed to fetch data')
