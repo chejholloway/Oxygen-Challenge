@@ -22,7 +22,7 @@ const Assets: React.FC = () => {
           <AssetsContainer>
             <AssetsTitle count={String(data?.data.total)} />
 
-            <Masonry columns={{ 640: 1, 768: 2, 1024: 3, 1280: 5 }} gap={4}>
+            <Masonry columns={{ 640: 1, 768: 2, 1024: 3, 1280: 5 }} gap={20}>
               {data?.data.clips.map((clip) => (
                 <AssetImage key={clip.id} {...clip} />
               ))}

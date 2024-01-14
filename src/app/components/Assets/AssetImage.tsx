@@ -23,7 +23,7 @@ const AssetImage: React.FC<AssetImageProps> = ({
       width={0}
       height={0}
       sizes="100vw"
-      className="w-full rounded-sm"
+      className="w-full rounded"
       style={{ height: 'auto', width: '100%' }}
       priority={true}
 
