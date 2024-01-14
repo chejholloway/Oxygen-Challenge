@@ -20,11 +20,13 @@ const AssetImage: React.FC<AssetImageProps> = ({
     <Image
       src={assets.image}
       alt={displayName}
-      width={300}
-      height={240}
-      style={{ maxHeight: '240px', maxWidth: 'auto' }}
+      width={0}
+      height={0}
+      sizes="100vw"
+      className="w-full h-[240px]"
+      style={{ height: 'auto', width: '100%' }}
       priority={true}
-      className={ImageStyles}
+
     />
     <Ellipses />
     <Caption />
