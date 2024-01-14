@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const AssetsContainer = styled.div`
-  ${tw`container mx-auto my-8 pl-2`}
+  ${tw`container mx-auto mt-8 pl-2`}
 `
 export const AssetsTitleText = styled.span`
   ${tw`text-xs font-bold text-gray-600 uppercase`}
